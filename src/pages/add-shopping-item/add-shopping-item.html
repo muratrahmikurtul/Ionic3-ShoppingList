@@ -11,18 +11,20 @@
 
   <ion-item>
     <ion-label>Name</ion-label>
-    <ion-input placeholder="iPad Pro"></ion-input>
+    <ion-input [(ngModel)]="item.name" placeholder="iPad Pro"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Quantity</ion-label>
-    <ion-input type="number" placeholder="1"></ion-input>
+    <ion-input [(ngModel)]="item.quantity" type="number" placeholder="1"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Price</ion-label>
-    <ion-input type="number" placeholder="700"></ion-input>
+    <ion-input [(ngModel)]="item.price" type="number" placeholder="700"></ion-input>
   </ion-item>
+
+  {{item | json}}
 
   <button ion-button block clear>Add</button>
 </ion-content>
